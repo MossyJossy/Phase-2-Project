@@ -18,7 +18,7 @@ The data-frames used can be found in the [data folder](data/kc_house_data.csv) o
 This project used an iterative approach to regression modelling to provide an insightful overview of the architectural aspects of a house in order to indetify the top 3 features that are correlated with the selling price of the property.
 
 Through various visualisations and Linear Regression Analysis from a simple base model, the project went through five total iterations. These versions tackeld issues such as identifying categorical data, dropping variables that showed high correlation (multicollinearity) to others, and transforming data to tackle skewness showcased in both the dependent and independent variables.
-For a full overview of the modelling process, please visit the [Regression Modelling Notebook](Cleaning & Modelling/Regression_Modelling.ipynb).
+For a full overview of the modelling process, please visit the [Regression Modelling Notebook](Cleaning_&_Modelling/Regression_Modelling.ipynb).
 
 ## Results
 Out of all the architectural variables in play, the regression analysis determined that the top 3 that were most highly correlated with the house selling price were:
@@ -58,7 +58,7 @@ Further analysis could produce supplementary understanding of what is correlated
 - **Gather housing data on other potential Counties**. If Metricon Homes is presented with similar Subdivision projects, this regression model may be used on other Counties housing data within the U.S to see if the have differing ideas of what is correlated with house price.
 
 ## For More Information
-Please review our full analysis in the [Modelling Jupyter Notebook](Cleaning & Modelling/Regression_Modelling.ipynb) or our [Presentation](Movie_Success_Presentation.pdf).
+Please review our full analysis in the [Modelling Jupyter Notebook](Cleaning_&_Modelling/Regression_Modelling.ipynb) or the [Presentation](King County Housing Presentation.pdf).
 
 For any additional questions, please contact **Jocelyn Fisher** at **[jocelynclaire216@gmail.com](mailto:jocelynclaire216@gmail.com)**
 
