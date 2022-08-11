@@ -57,7 +57,7 @@ Further analysis could produce supplementary understanding of what is correlated
 - **Gather housing data on other potential Counties**. If Metricon Homes is presented with similar Subdivision projects, this regression model may be used on other Counties housing data within the U.S to see if the have differing ideas of what is correlated with house price.
 
 ## For More Information
-Please review our full analysis in the notebooks found in the [Code Folder](Code/) and the [Presentation](King_County_Housing_Presentation.pdf).
+Please review our full analysis in the notebooks found in the [Code Folder](Code/) and the Kingn County Housing Presentation pdf.
 
 For any additional questions, please contact **Jocelyn Fisher** at **[jocelynclaire216@gmail.com](mailto:jocelynclaire216@gmail.com)**
 
