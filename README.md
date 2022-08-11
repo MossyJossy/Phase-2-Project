@@ -1,66 +1,75 @@
-# Phase 2 Project
+# Housing Price Dependency
 
-Another module down--you're almost half way there!
+Authors: Jocelyn Fisher
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-2-project-campus/master/halfway-there.gif)
+## Overview
+To provide inference into King County's desired building standards, this project uses an iterative approach to Regression Modelling in order to understand the top 3 architectural features of a house that are correlated with it's selling price. Metricon Homes can not only use this analysis in order to make the most out of their King County Subdivision project, but it may also prove useful if they are afforded similar opportunities across the County or for other Counties within the U.S.
 
-All that remains in Phase 2 is to put our newfound data science skills to use with a large project! This project should take 20 to 30 hours to complete.
+## Business Problem
+Metricon Homes has been listed as the top residential building company in Australia for 2020 & 2021. They have been granted a unique opportunity to develop a Subdivision of land within the King County area of Washington State, USA. They will design homes and build one on each lot of the Subdivision. Building in America is completely new territory for an Australian based company. Their departments are unsure if their usual building methods and strategies will suit this North American buying market, and are concerned about losing out on profits for the houses they intend to construct.
 
-## Project Overview
+Before construction begins, they wish to see what architectural features of a home within King County may effect the price of the houses they intend to build and sell. It is up to this project to delve into the historical housing data of the area and show the top 3 variables that are most correlated with the price of the house, and provide distinct estimates on how much it increases the value of the properties. This will enable Metricon Homes to have a unique understanding of what may determine house prices within this entirely new region. The business may also use the model on other County's data if they are afforded more projects within the States.
 
-For this project, you will use regression modeling to analyze house sales in a northwestern county.
+## The Data
+The data provided for this project includes the selling price and characteristics of homes that were sold in King County during 2014 and 2015. In it's original state, it has over 21,597 entries, each with a wide variety of information on the house. Not only did it provide insight into it's construction and architectural features; such as number of floors, bedrooms and bathrooms, but also many columns on it's location as well, including whether it was a waterfront property, it's zip-code, and the latitude and longitude.
+The data-frames used can be found in the [data folder](data/kc_house_data.csv) of this repository.
 
-### The Data
+## Method
+This project used an iterative approach to regression modelling to provide an insightful overview of the architectural aspects of a house in order to indetify the top 3 features that are correlated with the selling price of the property.
 
-This project uses the King County House Sales dataset, which can be found in  `kc_house_data.csv` in the data folder in this repo. The description of the column names can be found in `column_names.md` in the same folder. As with most real world data sets, the column names are not perfectly described, so you'll have to do some research or use your best judgment if you have questions about what the data means.
+Through various visualisations and Linear Regression Analysis from a simple base model, the project went through five total iterations. These versions tackeld issues such as identifying categorical data, dropping variables that showed high correlation (multicollinearity) to others, and transforming data to tackle skewness showcased in both the dependent and independent variables.
+For a full overview of the modelling process, please visit the [Regression Modelling Notebook](Cleaning & Modelling/Regression_Modelling.ipynb).
 
-It is up to you to decide what data from this dataset to use and how to use it. If you are feeling overwhelmed or behind, we recommend you ignore some or all of the following features:
+## Results
+Out of all the architectural variables in play, the regression analysis determined that the top 3 that were most highly correlated with the house selling price were:
 
-* date
-* view
-* sqft_above
-* sqft_basement
-* yr_renovated
-* zipcode
-* lat
-* long
-* sqft_living15
-* sqft_lot15
+### 1) Grade
+![Grade_v_Price_Correlation.png](Images/Grade_v_Price_Correlation.png)
 
-### Business Problem
+It is observable that the better construction materials, and more complex/well-planned architecture of the house, the higher the price the house will sell for. Some of the key attributes for these higher grades include:
 
-It is up to you to define a stakeholder and business problem appropriate to this dataset.
+- Quality design seen in the floor plans
+- Higher quality finish work on interior and exterior
+- Added amenities including solid woods, bathroom fixtures
+- All materials are of the highest quality
 
-If you are struggling to define a stakeholder, we recommend you complete a project for a real estate agency that helps homeowners buy and/or sell homes. A business problem you could focus on for this stakeholder is the need to provide advice to homeowners about how home renovations might increase the estimated value of their homes, and by what amount.
+Further Linear Regression analysis revealed that approximately for every grade level attained, the house price will increase by roughly $ 104,000 USD.
 
-## Deliverables
+### 2) Basement
+![Basement_v_Price_Correlation.png](Images/Basement_v_Price_Correlation.png)
 
-There are three deliverables for this project:
+If the house is built with a basement, the house price will approximately increase by roughly $ 61,000 USD.
 
-* A **GitHub repository**
-* A **Jupyter Notebook**
-* A **non-technical presentation**
+### 3) Sqft Living Space
+![SqftLiving_v_Price_Correlation.png](Images/SqftLiving_v_Price_Correlation.png)
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic for instructions on creating and submitting your deliverables. Refer to the rubric associated with this assignment for specifications describing high-quality deliverables.
+Approximately for every 1 sqft of living space added, the house price will increase by $ 165 USD.
 
-### Key Points
+## Conclusions
+Based off these regression analysis results, Metricon Homes should ensure the following to maximise the selling price of the houses they intend to construct:  
+- **The houses should have high quality architectrual designs, with high calibre materials, finish and ammenities, to ensure the home is granted a high `grade` by the King County Council.** Evidently, people in the King County will pay more for a well built and well constructed home.  
+- **The houses should be built with a basement.**  This is a very important note, as Australian homes are rarely built with a basement. However, it is obviously an extremely important factor when purchasing a house in the U.S. most likely due the common nature of Tornado weather systems.  
+- **The houses should have a large square footage of living space.**  
 
-* **Your deliverables should explicitly address each step of the data science process.** Refer to [the Data Science Process lesson](https://github.com/learn-co-curriculum/dsc-data-science-processes) from Topic 19 for more information about process models you can use.
+### Next Steps
+Further analysis could produce supplementary understanding of what is correlated with house pricing:  
+- **Analysis of location data can be utilised to find which areas to build in**. This particular data set had very incomplete/skewed data when it came to the zip-code. Either more regression modelling can look at it's possible polynomial relationship to price, or using further external data sources could provide useful information on which areas of King County are correlated with selling prices.
+- **Investigate Median Income trends**. There has been previous industry research that concluded the Median Income for an area can determine the house selling prices. When coupled with the above modelling, this data may have a more sophisticated understanding of where houses might sell for a higher price.
+- **Gather housing data on other potential Counties**. If Metricon Homes is presented with similar Subdivision projects, this regression model may be used on other Counties housing data within the U.S to see if the have differing ideas of what is correlated with house price.
 
-* **Your Jupyter Notebook should demonstrate an iterative approach to modeling.** This means that you begin with a basic model, evaluate it, and then provide justification for and proceed to a new model. After you finish refining your models, you should provide 1-3 paragraphs discussing your final model - this should include interpreting at least 3 important parameter estimates or statistics.
+## For More Information
+Please review our full analysis in the [Modelling Jupyter Notebook](Cleaning & Modelling/Regression_Modelling.ipynb) or our [Presentation](Movie_Success_Presentation.pdf).
 
-* **Based on the results of your models, your notebook and presentation should discuss at least two features that have strong relationships with housing prices.**
+For any additional questions, please contact **Jocelyn Fisher** at **[jocelynclaire216@gmail.com](mailto:jocelynclaire216@gmail.com)**
 
-## Getting Started
-
-Start on this project by forking and cloning [this project repository](https://github.com/learn-co-curriculum/dsc-phase-2-project) to get a local copy of the dataset.
-
-We recommend structuring your project repository similar to the structure in [the Phase 1 Project Template](https://github.com/learn-co-curriculum/dsc-project-template). You can do this either by creating a new fork of that repository to work in or by building a new repository from scratch that mimics that structure.
-
-## Project Submission and Review
-
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
-
-## Summary
-
-This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
+## Repository Structure
+```
+├── Cleaning & Modelling
+│   ├── Data Cleaning & Exploration.ipynb
+│   └── Regression Modelling.ipynb
+├── data
+├── Images
+├── King County Housing Analysis.ipynb
+├── King County Housing Presentation.pdf
+└── README.md
+```
