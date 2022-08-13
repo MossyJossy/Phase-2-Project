@@ -15,7 +15,7 @@ The data provided for this project includes the selling price and characteristic
 The data-frames used can be found in the [data folder](data/kc_house_data.csv) of this repository.
 
 ## Method
-This project used an iterative approach to regression modelling to provide an insightful overview of the architectural aspects of a house in order to indetify the top 3 features that are correlated with the selling price of the property.
+This project used an iterative approach to regression modelling to provide an insightful overview of the architectural aspects of a house in order to identify the top 3 features that are correlated with the selling price of the property.
 
 Through various visualisations and Linear Regression Analysis from a simple base model, the project went through five total iterations. These versions tackled issues such as identifying categorical data, dropping variables that showed high correlation (multicollinearity) to others, and transforming data to tackle skewness showcased in both the dependent and independent variables.
 
@@ -46,7 +46,7 @@ Approximately for every 1 sqft of living space added, the house price will incre
 
 ## Conclusions
 Based off these regression analysis results, Metricon Homes should ensure the following to maximise the selling price of the houses they intend to construct:  
-- **The houses should have high quality architectrual designs, with high calibre materials, finish and ammenities, to ensure the home is granted a high `grade` by the King County Council.** Evidently, people in the King County will pay more for a well built and well constructed home.  
+- **The houses should have high quality architectural designs, with high calibre materials, finish and ammenities, to ensure the home is granted a high `grade` by the King County Council.** Evidently, people in the King County will pay more for a well built and well constructed home.  
 - **The houses should be built with a basement.**  This is a very important note, as Australian homes are rarely built with a basement. However, it is obviously an extremely important factor when purchasing a house in the U.S. most likely due the common nature of Tornado weather systems.  
 - **The houses should have a large square footage of living space.**  
 
